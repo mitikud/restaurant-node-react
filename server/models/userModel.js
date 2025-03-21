@@ -35,6 +35,14 @@ const userSchema = new mongoose.Schema({
     type: Date,
     default: Date.now,
   },
+  modifiedAt: {
+    type: Date,
+    
+  },
+  lastloginAt: {
+    type: Date,
+    
+  },
 });
 
 const User = mongoose.model("User", userSchema);

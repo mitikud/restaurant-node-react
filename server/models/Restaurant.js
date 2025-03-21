@@ -22,9 +22,23 @@ const restaurantSchema = new mongoose.Schema({
       ref: "Order",
     },
   ],
+  licence: {
+    type: String,
+    required: true,
+    trim: true,
+  },
+  is_approved: {
+    type: Boolean,
+    required: true,
+    default: false,
+  },
   createdAt: {
     type: Date,
     default: Date.now,
+  },
+  updatedAt: {
+    type: Date,
+    
   },
 });
 
